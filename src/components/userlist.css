@@ -1,0 +1,43 @@
+.table{
+    width: 50% !important;
+   
+}
+td{
+    padding:30%;
+    width: 90px;
+}
+.container{
+  display:flex;
+  justify-content:center;
+  margin-top: 15vh;
+}
+.imageround{
+    width: 75px;
+    height:75px;
+    border-radius:50%;
+}
+
+.name{
+    margin-left:-2%
+}
+.username{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    margin-left:8px;
+}
+.nameandimage{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+.dropdwonactive , .dropdwonrole , .deleteicon{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.deleteicon{
+    color: gray;
+    font-size:30px;
+}
