@@ -11,9 +11,9 @@
   padding: 20px;
   border-radius: 2em;
   text-align: center;
-  -webkit-box-shadow: 14px 21px 71px -9px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow: 14px 21px 71px -9px rgba(0, 0, 0, 0.56);
-  box-shadow: 14px 21px 71px -9px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
 }
 .CardCenterContent {
   display: flex;
@@ -75,10 +75,11 @@
 }
 img {
   border-radius: 50%;
-  margin: 0 auto;
-  -webkit-box-shadow: 15px 27px 42px -11px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow: 15px 27px 42px -11px rgba(0, 0, 0, 0.56);
-  box-shadow: 15px 27px 42px -11px rgba(0, 0, 0, 0.56);
+  margin: 7px auto;
+  
+  -webkit-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
 }
 .clicks {
   display: inline-flex;
