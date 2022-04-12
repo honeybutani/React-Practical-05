@@ -1,43 +1,78 @@
-.table{
-    width: 50% !important;
-   
+.table {
+  width: 50% !important;
+  height: 90% !important;
 }
-td{
-    padding:30%;
-    width: 90px;
+td {
+  padding: 30%;
+  width: 90px;
 }
-.container{
-  display:flex;
-  justify-content:center;
+.container1 {
   margin-top: 15vh;
+  background-color: white;
+  border-radius: 15px;
+  width: 900px;
+  min-width: 900px;
+  height: 705px;
+  margin-left: 20%;
+  padding-left: 3%;
+  padding-top: 15px;
+  right: 100px;
 }
-.imageround{
-    width: 75px;
-    height:75px;
-    border-radius:50%;
+.imageround {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 0px 6px;
 }
 
-.name{
-    margin-left:-2%
+.name {
+  margin-left: -2%;
 }
-.username{
-    display: flex;
-    flex-direction: column;
-    padding:20px;
-    margin-left:8px;
+.username {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
 }
-.nameandimage{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: center;
+.nameandimage {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
 }
-.dropdwonactive , .dropdwonrole , .deleteicon{
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
+.dropdwonactive,
+.dropdwonrole,
+.deleteicon,
+.locksymbol {
+  display: flex;
+  align-items: center;
+  margin-top: 30px !important;
+  margin: 10px;
+  padding: 3px;
 }
-.deleteicon{
-    color: gray;
-    font-size:30px;
+
+.deleteicon,
+.locksymbol {
+  color: rgb(135, 129, 129);
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.container-table {
+  width: 70%;
+}
+.activeclass {
+  margin: 5px;
+  margin-top: 33px;
+  color: green;
+  font-weight: bold;
+}
+.ownerclass {
+  font-weight: bold;
+  margin: 5px;
+  margin-top: 33px;
 }

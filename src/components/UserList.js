@@ -1,50 +1,91 @@
-import React from 'react'
-import  '../components/userlist.css';
-import { useSelector, useDispatch} from 'react-redux';
-import {ProfileHover} from '../redux/actions/action'
-
-
+import React from "react";
+import "../components/userlist.css";
+import { useSelector, useDispatch } from "react-redux";
+import { ProfileHover, ProfileHoverLeave } from "../redux/actions/action";
+import CardHover from "./CardHover";
+import { Lock, Trash2 } from "react-feather";
+ /* userlist will show user data coming from reducer as intial state data 
+  in table format and on hover dispatch 2 method onMouseEnter and onMouseLeave */
 const UserList = () => {
-
-    const UserList  = useSelector((state) =>state.users)
-    const Dispatch = useDispatch();
+  const UserList = useSelector((state) => state.users);
+  const selectedid = useSelector((state) => state.selectedid);
+  const Dispatch = useDispatch();
   return (
     <div>
-       <div className="container">
-          
-            <table className="table table-borderless table-responsive w-100 ">
-                <thead>
-                    <tr >
-                        <th >Name</th>
-                        <th>Status</th>
-                        <th>Access</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    {UserList && UserList.map(user =>
-                        <tr key={user.id}>
-                            <td ><div  onMouseEnter={() => Dispatch(ProfileHover(user.id))} className="nameandimage"><img  className="imageround" src={user.image} width="50" height="50"></img><div className="username">{user.firstName} <br></br> {user.email}</div></div></td>
-                            <td> <select className="dropdwonactive">
-                            <option value="option 1">Inactive</option>
-                            <option value="option 2">Active</option>
-                            </select></td>
-                            <td><select className="dropdwonrole">
-                            <option value="option 1">Manager</option>
-                            <option value="option 2">Owner</option>
-                            <option value="option 2">Read</option>
-                            </select></td>
-                           <td><i className="bi bi-trash deleteicon"></i></td> 
-                        </tr>
-                    )}
-                </tbody>
-                {console.log(useSelector((state) =>state.selectedid))}
-            </table>
+      <div className="container1">
+        <div className="container-table">
+          <table className="table table-borderless table-responsive  ">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Access</th>
+              </tr>
+            </thead>
+            <tbody>
+              {UserList &&
+                UserList.map((user) => (
+                  <tr key={user.id}>
+                    <td>
+                      <div
+                        onMouseEnter={() => Dispatch(ProfileHover(user.id))}
+                        onMouseLeave={() => Dispatch(ProfileHoverLeave())}
+                        className="nameandimage"
+                      >
+                        <img
+                          className="imageround"
+                          src={user.image}
+                          width="50"
+                          height="50"
+                        ></img>
+                        <div className="username">
+                          {user.firstName} <br></br> {user.email}
+                        </div>
+                      </div>
+                    </td>
 
-        
-    </div>
-    </div>
-  )
-}
+                    <td>
+                      {user.isActive ? (
+                        <div className="activeclass">Active</div>
+                      ) : (
+                        <select className="dropdwonactive">
+                          <option value="option 1">Inactive</option> {" "}
+                          <option value="option 2">Active</option>
+                        </select>
+                      )}
+                    </td>
+                    <td>
+                      {user.isActive ? (
+                        <div className="ownerclass">Owner</div>
+                      ) : (
+                        <select className="dropdwonrole">
+                            <option value="option 1">Manager</option>
+                          <option value="option 2">Read</option>
+                        </select>
+                      )}
+                    </td>
 
-export default UserList
+                    <td>
+                      {user.isActive ? (
+                        <i className="locksymbol">
+                          <Lock />
+                        </i>
+                      ) : (
+                        <i className="deleteicon">
+                          <Trash2 />
+                        </i>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+       
+        {selectedid && <CardHover />}
+      </div>
+    </div>
+  );
+};
+
+export default UserList;
