@@ -13,7 +13,7 @@ const INITIAL_STATE = {
     },
     {
       id: 2,
-      firstName: "Frank Vyas",
+      firstName: "Jill Vyas",
       email: "frankvyas@gmail.com",
       status: "InActive",
       isActive: false,
