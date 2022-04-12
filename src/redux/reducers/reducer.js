@@ -14,7 +14,7 @@ const INITIAL_STATE = {
     {
       id: 2,
       firstName: "Jill Vyas",
-      email: "frankvyas@gmail.com",
+      email: "jillvyas@gmail.com",
       status: "InActive",
       isActive: false,
       image: "https://reqres.in/img/faces/2-image.jpg",
