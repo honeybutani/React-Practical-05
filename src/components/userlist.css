@@ -8,6 +8,7 @@ td {
 }
 .container1 {
   margin-top: 15vh;
+  position: relative;
   background-color: white;
   border-radius: 15px;
   width: 900px;

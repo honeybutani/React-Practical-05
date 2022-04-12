@@ -1,7 +1,7 @@
 .HoverCard {
   position: absolute;
-  bottom: 260px;
-  left: 1130px;
+  bottom: 145px;
+	left: 750px;
   right: 350px;
   height: 450px;
   width: 300px;
@@ -76,7 +76,6 @@ box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
 img {
   border-radius: 50%;
   margin: 7px auto;
-  
   -webkit-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 13px -6px rgba(0,0,0,0.75);
