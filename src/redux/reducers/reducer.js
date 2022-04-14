@@ -70,6 +70,11 @@ export default function reducer(state = INITIAL_STATE, action) {
       return { ...state, selectedid: action.payload };
     case "onMouseLeave":
       return { ...state, selectedid: action.payload };
+      case  "DeleteUser":
+        let deleteusers = [...state.users];
+    let updatedusers=  deleteusers.filter((i)=>i.id !== action.payload);
+  
+       return { ...state, users: updatedusers };
 
     default:
       return state;

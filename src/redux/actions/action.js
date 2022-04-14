@@ -11,3 +11,9 @@ export const ProfileHoverLeave = () => {
     payload: null,
   };
 };
+export const DeleteItem = (id) => {
+  return {
+    type: "DeleteUser",
+    payload: id,
+  };
+};

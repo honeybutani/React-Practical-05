@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/userlist.css";
 import { useSelector, useDispatch } from "react-redux";
-import { ProfileHover, ProfileHoverLeave } from "../redux/actions/action";
+import { ProfileHover, ProfileHoverLeave ,DeleteItem } from "../redux/actions/action";
 import CardHover from "./CardHover";
 import { Lock, Trash2 } from "react-feather";
  /* userlist will show user data coming from reducer as intial state data 
@@ -10,6 +10,7 @@ const UserList = () => {
   const UserList = useSelector((state) => state.users);
   const selectedid = useSelector((state) => state.selectedid);
   const Dispatch = useDispatch();
+
   return (
     <div>
       <div className="container1">
@@ -71,9 +72,10 @@ const UserList = () => {
                           <Lock />
                         </i>
                       ) : (
-                        <i className="deleteicon">
+                        <i className="deleteicon"  onClick  ={()=> Dispatch(DeleteItem(user.id))}>
                           <Trash2 />
                         </i>
+                        
                       )}
                     </td>
                   </tr>
