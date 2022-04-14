@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import UserList from "./components/UserList";
-import store from "./redux/store/store";
+import store , {persistor} from "./redux/store/store";
 import { Provider } from "react-redux";
+import { PersistGate } from 'redux-persist/integration/react';
+
 
 const App = () => {
 
   return (
     <div>
       <Provider store={store}>
-{console.log("hello iniital"+store.getState())}
+      <PersistGate  persistor={persistor}>
        
         <UserList />
+        </PersistGate>
       </Provider>
     </div>
   );
